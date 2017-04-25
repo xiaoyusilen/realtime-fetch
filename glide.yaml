@@ -1,0 +1,8 @@
+package: github.com/xiaoyusilen/realtime-fetch
+import:
+- package: github.com/Sirupsen/logrus
+  version: ^0.11.5
+- package: gopkg.in/dancannon/gorethink.v2
+  version: ^3.0.2
+  subpackages:
+  - types

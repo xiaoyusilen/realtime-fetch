@@ -1,0 +1,34 @@
+hash: 1426bd8f040738733111181809e4a0d4b2df16836714106686025f08d938cafe
+updated: 2017-04-25T17:51:06.55784612+08:00
+imports:
+- name: github.com/cenkalti/backoff
+  version: 4dc77674aceaabba2c7e3da25d4c823edfb73f99
+- name: github.com/golang/protobuf
+  version: 2402d76f3d41f928c7902a765dfc872356dd3aad
+  subpackages:
+  - proto
+- name: github.com/hailocab/go-hostpool
+  version: e80d13ce29ede4452c43dea11e79b9bc8a15b478
+- name: github.com/Sirupsen/logrus
+  version: ba1b36c82c5e05c4f912a88eab0dcd91a171688f
+- name: golang.org/x/crypto
+  version: 3543873453996aaab2fc6b3928a35fc5ca2b5afb
+  subpackages:
+  - pbkdf2
+- name: golang.org/x/sys
+  version: 075e574b89e4c2d22f2286a7e2b919519c6f3547
+  subpackages:
+  - unix
+- name: gopkg.in/dancannon/gorethink.v2
+  version: 7ab832f7b65573104a555d84a27992ae9ea1f659
+  subpackages:
+  - types
+- name: gopkg.in/fatih/pool.v2
+  version: 6e328e67893eb46323ad06f0e92cb9536babbabc
+- name: gopkg.in/gorethink/gorethink.v3
+  version: 7ab832f7b65573104a555d84a27992ae9ea1f659
+  subpackages:
+  - encoding
+  - ql2
+  - types
+testImports: []
