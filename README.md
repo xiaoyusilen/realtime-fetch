@@ -15,7 +15,7 @@ Congratulations! 🎉 You can use this repo.
 # About this repo
 1. I use channel as a message queue, of course you can use `RabbitMQ` or others.
 2. I use `RethinkDB` as my database, you can use others if you like.But you should change the code yourself.
-3. I code a **simple** example.
+3. I just code a **simple** example.
 
 # How to use
 First, make sure you are under macOS system. Use command `cd` to the root directory of `realtime-fetch`. Then do like below,
@@ -52,8 +52,9 @@ Do all of these, you can command as `go run main.go`, then you will see:
 The msg will be the id of your msg.
 
 # TBD
-- I will add func `SendToAPI()`
-- I will add time judge in `FetchRealData` to filter unchanged data at time interval.
+- Add func `SendToAPI()`
+  - Get data from channel then send a request to a Restful API
+- Add time judge in `FetchRealData` to filter unchanged data at time interval.
 
 # Nonsense
 Nothing. Thx~
