@@ -54,7 +54,8 @@ The msg will be the id of your msg.
 # TBD
 - Add func `SendToAPI()`
   - Get data from channel then send a request to a Restful API
-- Add time judge in `FetchRealData` to filter unchanged data at time interval.
+- Add time judge in `FetchRealData` to filter unchanged data at time interval
+- Add graceful shutdown maybe
 
 # Nonsense
 Nothing. Thx~

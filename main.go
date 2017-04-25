@@ -14,6 +14,9 @@ func main() {
 	// Start RethinkDB
 	c := route.NewRethinkdb()
 
+	// Close RethinkDB
+	defer c.Close()
+
 	// New a channel to save the realtime data
 	ch := make(chan model.Test, 10000)
 

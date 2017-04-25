@@ -16,6 +16,9 @@ func FetchRealData(c *r.Session, ch chan model.Test) {
 		"id": r.Row.Field("id"),
 	}).Run(c)
 
+	// Close the query
+	defer resp.Close()
+
 	// Deal with error
 	if err != nil {
 		log.Errorf("Query error: %s.", err)
