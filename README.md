@@ -27,12 +27,11 @@ Please make sure you can over the **wall**.
 Enter `localhost:8080` in your browser
 
 5. `r.db("test").tableCreate("test")`
-
 6. `r.db("test").table("test").insert({
       "name": "xiaoyusilen"
     })`
     
-Do all of these, you can command as `go run main.go`, you will see:
+Do all of these, you can command as `go run main.go`, then you will see:
 
 >   time="2017-04-25T18:02:47+08:00" level=info msg="rethinkdb connect success!" 
 > 
@@ -42,4 +41,9 @@ Do all of these, you can command as `go run main.go`, you will see:
   
 The msg will be the id of your msg.
 
-Thx~
+# TBD
+- I will add func `SendToAPI()`
+- I will add time judge in `FetchRealData` to filter unchanged data at time interval.
+
+# Nonsense
+Nothing. Thx~

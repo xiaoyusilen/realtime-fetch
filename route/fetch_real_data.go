@@ -37,4 +37,7 @@ func FetchRealData(c *r.Session, ch chan model.Test) {
 
 	// Write data to channel
 	ch <- test
+
+	// return to stop the goroutine
+	return
 }
