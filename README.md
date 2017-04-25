@@ -1,14 +1,14 @@
 # Realtime-fetch
-A simple project of fetching realtime data and write to channel then send to one Restful API. 🤔
+A simple project of fetching real-time data and write to channel then send to one Restful API. 🤔
 
-**What is realtime data?**
-Realtime data means the data changed all the time. Data struct is unimportant.
+**What is real-time data?**
+Real-time data means the data changed all the time. Data struct is unimportant.
 
 # When you can use this repo
 If you :
-- have a table of realtime data
+- have a table contains real-time data
 - not too much data
-- you want to deal with the realtime data
+- you want to deal with the real-time data
 
 Congratulations! 🎉 You can use this repo.
 
@@ -18,7 +18,7 @@ Congratulations! 🎉 You can use this repo.
 3. I code a **simple** example.
 
 # How to use
-First, you should have a MacBook. Use command `cd` to the root directory of `realtime-fetch`. Then do like below,
+First, make sure you are under macOS system. Use command `cd` to the root directory of `realtime-fetch`. Then do like below,
 1. `glide init`
 2. `glide update`
 
@@ -31,7 +31,7 @@ Enter `localhost:8080` in your browser, you will see,
 
 ![WechatIMG150](http://ww2.sinaimg.cn/large/006tNc79ly1fez760h0frj31hu0y4q8r.jpg)
 
-RethinkDB have a client driver itself, you can see the realtime read/write on the board. Want more? [RethinkDB](https://www.rethinkdb.com/)⬅️
+RethinkDB have a client driver itself, you can see the real-time read/write data on the board. Want more? [RethinkDB](https://www.rethinkdb.com/)⬅️
 
 Click `Data Explorer` then execute sql as below,
 
