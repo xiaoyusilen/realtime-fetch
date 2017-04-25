@@ -29,7 +29,7 @@ Please make sure you can over the **wall**.
 
 Enter `localhost:8080` in your browser, you will see,
 
-![WechatIMG150](/Users/Silen/Downloads/WechatIMG150.jpeg)
+![WechatIMG150](http://ww2.sinaimg.cn/large/006tNc79ly1fez760h0frj31hu0y4q8r.jpg)
 
 RethinkDB have a client driver itself, you can see the realtime read/write on the board. Want more? [RethinkDB](https://www.rethinkdb.com/)⬅️
 
