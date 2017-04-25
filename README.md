@@ -32,9 +32,9 @@ Enter `localhost:8080` in your browser
     
 Do all of these, you can command as `go run main.go`, you will see:
 
-> time="2017-04-25T18:02:47+08:00" level=info msg="rethinkdb connect success!" 
-  time="2017-04-25T18:02:47+08:00" level=info msg="{39628f3c-8943-4bcf-a70f-98290de97580 }" 
-  time="2017-04-25T18:02:57+08:00" level=info msg="{39628f3c-8943-4bcf-a70f-98290de97580 }"
+>   time="2017-04-25T18:02:47+08:00" level=info msg="rethinkdb connect success!" 
+    time="2017-04-25T18:02:47+08:00" level=info msg="{39628f3c-8943-4bcf-a70f-98290de97580 }" 
+    time="2017-04-25T18:02:57+08:00" level=info msg="{39628f3c-8943-4bcf-a70f-98290de97580 }"
   
 The msg will be the id of your msg.
 
