@@ -25,7 +25,9 @@ Please make sure you can over the **wall**.
 4. `rethinkdb`
 
 Enter `localhost:8080` in your browser
+
 5. `r.db("test").tableCreate("test")`
+
 6. `r.db("test").table("test").insert({
       "name": "xiaoyusilen"
     })`
