@@ -1,5 +1,6 @@
 # Realtime-fetch
 A simple project of fetching real-time data and write to channel then send to one Restful API. 🤔
+[Introduction](http://xiaoyu.world/2017/04/26/go-fetch-real-time-data/)⬅️
 
 **What is real-time data?**
 Real-time data means the data changed all the time. Data struct is unimportant.
