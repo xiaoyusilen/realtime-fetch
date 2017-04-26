@@ -19,9 +19,14 @@ func FetchRealData(c *r.Session, ch chan model.Test) {
 	// Close the query
 	defer resp.Close()
 
-	// Deal with error
+	// Deal with error, exit the goroutine
 	if err != nil {
+		if resp.IsNil() {
+			log.Errorf("Have no data like this, err is: %s.", err)
+			return
+		}
 		log.Errorf("Query error: %s.", err)
+		return
 	}
 
 	// Change data struct from database to you need
@@ -31,6 +36,7 @@ func FetchRealData(c *r.Session, ch chan model.Test) {
 
 	if err != nil {
 		log.Errorf("Change data struct err: %s.", err)
+		return
 	}
 
 	test := model.Test{
