@@ -2,7 +2,12 @@
 
 package model
 
+import (
+	"time"
+)
+
 type Test struct {
-	ID   string
-	Name string
+	ID        string
+	Name      string
+	UpdatedAt time.Time
 }

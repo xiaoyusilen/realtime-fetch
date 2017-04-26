@@ -3,15 +3,18 @@
 package route
 
 import (
+	"time"
+
 	log "github.com/Sirupsen/logrus"
 	r "gopkg.in/dancannon/gorethink.v2"
 
 	"github.com/xiaoyusilen/realtime-fetch/model"
 )
 
-func FetchRealData(c *r.Session, ch chan model.Test) {
+func FetchRealData(c *r.Session, ch chan model.Test, t time.Time, flag bool) {
 
 	// Fetch realtime data from rethinkdb
+	// Query all ids
 	resp, err := r.DB("test").Table("test").Map(map[string]interface{}{
 		"id": r.Row.Field("id"),
 	}).Run(c)
@@ -30,22 +33,39 @@ func FetchRealData(c *r.Session, ch chan model.Test) {
 	}
 
 	// Change data struct from database to you need
-	var res map[string]string
+	var res []map[string]string
 
-	err = resp.One(&res)
+	err = resp.All(&res)
 
 	if err != nil {
 		log.Errorf("Change data struct err: %s.", err)
 		return
 	}
 
-	test := model.Test{
-		ID:   res["id"],
-		Name: res["name"],
-	}
+	// Judge time
+	for i := 0; i < len(res); i++ {
+		resp, err = r.DB("lecar").Table("realtime_veh_info").Filter(map[string]string{
+			"id": res[i]["id"],
+		}).Run(c)
 
-	// Write data to channel
-	ch <- test
+		var re model.Test
+		err = resp.One(&re)
+
+		if err != nil {
+			log.Errorf("err is: %s", err)
+
+		}
+
+		// if flag == false, means if the data is unchanged, it won't be added to channel
+		if !flag {
+			if re.UpdatedAt.After(t) {
+				ch <- re
+			}
+		} else {
+			// if flag == true, every data will be added to channel
+			ch <- re
+		}
+	}
 
 	// return to stop the goroutine
 	return

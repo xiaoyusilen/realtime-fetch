@@ -20,15 +20,22 @@ func main() {
 	// New a channel to save the realtime data
 	ch := make(chan model.Test, 10000)
 
-	// One goroutine: read from channel
-	go route.CheckChannel(ch)
+	// This part of code is ugly! I will refactor it someday.
+
+	t := time.Now()
+
+	go route.FetchRealData(c, ch, t, true)
+
+	time.Sleep(time.Second * 10)
 
 	for {
-		// Another goroutine: fetch realtime data
-		go route.FetchRealData(c, ch)
 
-		// Time sleep control the fetch time, I set it as 10 seconds
+		// 获取最新数据
+		go route.FetchRealData(c, ch, t, false)
+
+		t = time.Now()
+
+		// 每10s执行一次
 		time.Sleep(time.Second * 10)
 	}
-
 }

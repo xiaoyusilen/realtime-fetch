@@ -16,7 +16,13 @@ func CheckChannel(ch chan model.Test) {
 			// You can do what you want to the realtime data.
 			log.Println(msg)
 
-			// todo: send msg to Restful API
+			// send msg to Restful API
+			res := SendToAPI(msg)
+			if res {
+				log.Debugf("send to api successed.")
+			} else {
+				log.Debugf("send to api failed.")
+			}
 		}
 	}
 }
