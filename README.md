@@ -52,10 +52,27 @@ Do all of these, you can command as `go run main.go`, then you will see:
 
 The msg will be the id of your msg.
 
+# Build Docker image
+
+First of all, update the address in `route.rethinkdb.go` to your IP.
+Then start rethink with your IP,
+1. `rethinkdb --canonical-address your IP --bind all` 
+2. `GOOS=linux GOARCH=amd64 go build main.go`
+3. `docker build -t realtime-fetch .`
+4. `docker images`
+
+> ➜  realtime-fetch git:(develop) ✗ docker images
+> 
+>  REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+> 
+>  realtime-fetch      latest              71a4028e8e4d        15 seconds ago      711 MB
+
+5. `docker run realtime-fetch`
+
 # TBD
-- Add func `SendToAPI()`
-  - Get data from channel then send a request to a Restful API
-- Add time judge in `FetchRealData` to filter unchanged data at time interval
+- Add func `SendToAPI()` ✅
+  - Get data from channel then send a request to a Restful API ✅
+- Add time judge in `FetchRealData` to filter unchanged data at time interval ✅
 - Add graceful shutdown maybe
 
 # Nonsense
