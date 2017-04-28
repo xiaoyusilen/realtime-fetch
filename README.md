@@ -76,4 +76,4 @@ Then start rethink with your IP,
 - Add graceful shutdown maybe
 
 # Nonsense
-Nothing. Thx~
+2017-4-28 16:32 Database will be changed to MongoDB. Why? My boss said it. 😑
