@@ -25,6 +25,7 @@ _testmain.go
 
 *.exe
 *.test
+common/mongo_test.go
 *.prof
 .idea/
 rethinkdb_data/

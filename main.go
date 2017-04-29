@@ -5,6 +5,7 @@ package main
 import (
 	"time"
 
+	"github.com/xiaoyusilen/realtime-fetch/common"
 	"github.com/xiaoyusilen/realtime-fetch/model"
 	"github.com/xiaoyusilen/realtime-fetch/route"
 )
@@ -12,7 +13,7 @@ import (
 func main() {
 
 	// Start RethinkDB
-	c := route.NewRethinkdb()
+	c := common.NewRethinkdb()
 
 	// Close RethinkDB
 	defer c.Close()

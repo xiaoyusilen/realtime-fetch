@@ -1,6 +1,6 @@
 // author by @xiaoyusilen
 
-package route
+package common
 
 import (
 	log "github.com/Sirupsen/logrus"

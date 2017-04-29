@@ -1,5 +1,5 @@
 hash: 1426bd8f040738733111181809e4a0d4b2df16836714106686025f08d938cafe
-updated: 2017-04-25T17:51:06.55784612+08:00
+updated: 2017-04-29T15:30:51.22702587+08:00
 imports:
 - name: github.com/cenkalti/backoff
   version: 4dc77674aceaabba2c7e3da25d4c823edfb73f99
@@ -12,7 +12,7 @@ imports:
 - name: github.com/Sirupsen/logrus
   version: ba1b36c82c5e05c4f912a88eab0dcd91a171688f
 - name: golang.org/x/crypto
-  version: 3543873453996aaab2fc6b3928a35fc5ca2b5afb
+  version: c7af5bf2638a1164f2eb5467c39c6cffbd13a02e
   subpackages:
   - pbkdf2
 - name: golang.org/x/sys
@@ -31,4 +31,11 @@ imports:
   - encoding
   - ql2
   - types
+- name: gopkg.in/mgo.v2
+  version: 3f83fa5005286a7fe593b055f0d7771a7dce4655
+  subpackages:
+  - bson
+  - internal/json
+  - internal/sasl
+  - internal/scram
 testImports: []
