@@ -67,7 +67,7 @@ Then start rethink with your IP,
 > 
 >  realtime-fetch      latest              71a4028e8e4d        15 seconds ago      711 MB
 
-5. `docker run realtime-fetch`
+5. `docker run -it realtime-fetch /bin/sh`
 
 # TBD
 - Add func `SendToAPI()` ✅
