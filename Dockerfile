@@ -1,4 +1,4 @@
-FROM golang:1.8.1
+FROM alpine
 
 MAINTAINER xiaoyusilen <debug@xiaoyu.fail>
 
